@@ -41,14 +41,18 @@ const Home = ({ header, education, experience }) => {
             {experience.map((ed) => (
               <div
                 key={ed?._id}
-                style={{ margin: "2px", backgroundColor: "ghostwhite" }}
+                style={{
+                  marginBottom: "7px",
+                  padding: "7px",
+                  backgroundColor: "ghostwhite",
+                }}
               >
                 <p>
                   <em>{ed?.name}</em>
                   <br />
                   {ed?.startdate} to {ed.enddate}
                   <br />
-                  {ed?.position}
+                  <em>{ed?.position}</em>
                 </p>
                 <p> {ed?.desc}</p>
               </div>
@@ -60,11 +64,15 @@ const Home = ({ header, education, experience }) => {
             {education.map((ed) => (
               <div
                 key={ed?._id}
-                style={{ margin: "2px", backgroundColor: "aliceblue" }}
+                style={{
+                  marginBottom: "7px",
+                  padding: "7px",
+                  backgroundColor: "aliceblue",
+                }}
               >
                 <p>
-                  {ed?.startdate} to {ed.enddate} | <em>{ed?.schoolname}</em> |{" "}
-                  <em>{ed?.degree}</em>
+                  <em>{ed?.schoolname}</em> | <em>{ed?.degree}</em> |{" "}
+                  {ed?.startdate} to {ed.enddate}
                 </p>
                 <p> {ed?.edudesc}</p>
               </div>
